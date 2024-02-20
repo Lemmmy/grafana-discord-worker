@@ -1,0 +1,18 @@
+{
+  "name": "grafana-discord-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx wrangler dev",
+    "deploy-worker": "npx wrangler deploy",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": [],
+  "author": "Lemmmy",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "typescript": "^5.3.3"
+  }
+}

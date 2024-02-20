@@ -1,0 +1,19 @@
+name = "grafana-discord-worker"
+main = "src/index.ts"
+compatibility_date = "2024-02-20"
+env = { }
+
+[triggers]
+crons = [ ]
+
+[vars]
+# Create a variable for each Discord webhook URL you want to use, and the corresponding URL token, separated by a
+# comma.
+#
+# For example:
+# TOKEN_1 = dJalOiSOKpw7eBLA6G3mO6CU,https://discord.com/api/webhooks/1234567890/ABCDEFGHIJKLM
+# TOKEN_2 = UDmyLMVjNdPFF0zKetxfmDV6,https://discord.com/api/webhooks/0987654321/XYZABCDEFGHIJKLM
+# The webhook URLs will then be: https://your-worker.your-domain.workers.dev/webhook
+# Authenticate with header: Bearer dJalOiSOKpw7eBLA6G3mO6CU
+#
+# Run `echo <VALUE> | wrangler secret put <NAME>` for each one
