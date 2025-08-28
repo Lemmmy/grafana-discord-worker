@@ -49,15 +49,13 @@ async function handleGrafanaWebhook(req: Request, forwardingUrl: string) {
     content: message,
   };
 
-  await fetch(forwardingUrl, {
+  return fetch(forwardingUrl, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
   });
-
-  return new Response("OK");
 }
 
 export default {
